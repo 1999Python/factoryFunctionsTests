@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.min.js"></script>
+    <style>
+        h1{
+            font-size: large;
+            font-family: 'Courier New', Courier, monospace;
+        }  
+        body{
+            background-image: url("background.jpg");
+        }
+        h1{
+            font-size: 2.5em;
+            margin-left: 10em;
+            font-style: oblique;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Factory Functions</h1>
+    <div id="mocha"></div>
+    <script>
+        mocha.setup('bdd');
+        var assert = chai.assert;
+    </script>
+    
+
+
+<script src="functions/calculatefunc.js"></script>
+<script src="test/calculatetest.js"></script>
+
+<script src="functions/textbillfunc.js"></script>
+<script src="test/textbilltest.js"></script>
+
+<script src="functions/radiofunc.js"></script>
+<script src="test/radiotest.js"></script>
+
+<script src="functions/settingsfunc.js"  charset="utf-8"></script>
+<script src="test/settingstest.js"  charset="utf-8"></script>
+
+    <script>
+        mocha.checkLeaks();
+        mocha.run();
+    </script>
+
+</body>
+
+</html>
